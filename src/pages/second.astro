@@ -1,0 +1,26 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import ThemeSelect from "../components/ThemeSelect.astro";
+import ThemeManager from "../components/ThemeManager.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+
+		<ViewTransitions />
+		<ThemeManager />
+	</head>
+	<body
+		class="bg-LM-Background dark:bg-DM-Background transition ease-in-out text-LM-Text dark:text-DM-Text flex flex-col items-center mx-6 h-screen sm:h-auto"
+	>
+		<p>Second Page</p>
+		<ThemeSelect />
+
+		<a href="/">Main page</a>
+	</body>
+</html>
